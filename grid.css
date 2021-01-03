@@ -58,3 +58,18 @@
       background-color: #666;
       border: medium solid #999;
     }
+
+    .grid-explicit{
+        display: grid;
+        /*grid 3x3*/
+        grid-template-rows: 2rem 20vh 30%;
+        grid-template-columns: 50% 100px 1fr;
+        /*grid 5x4*/
+        grid-template-rows: repeat(5,20%);
+        grid-template-columns: repeat(4,1fr); /*4 columnas de un tamaño proporcional 1fr*/
+        /*grid 4x5*/
+        grid-template-columns: 20% repeat(2,30%) 20%;
+        grid-template-rows:repeat(5,auto);
+        grid-gap: 0; /*El primero es para row y la segunda columnas*/
+
+    }   
