@@ -223,3 +223,55 @@
         grid-column: 2/4;
         grid-row: 2/4;
     }
+
+
+    .grid-order{
+        display: grid;
+        /*Grid 3 x 2*/
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+
+    }
+    /*El primer elemento es el que tiene el menor valor
+    *esto cuando se ordena de la forma natural del flujo
+    */
+
+    .grid-order .item:nth-child(1){
+        /*default 0, -1 0 1*/
+        order: 1;
+    }
+
+    .grid-order .item:nth-child(2){
+        /*default 0, -1 0 1*/
+        order: 2;
+    }
+
+    .grid-order .item:nth-child(5){
+        /*default 0, -1 0 1*/
+        order: -1;
+    }
+
+
+
+    .grid-align{
+        display: grid;
+        /*Grid 3 x 2*/
+        grid-template-columns: repeat(3,200px);
+        grid-template-rows: repeat(2, 200px);
+        /*Justifica en el eje x*/
+        justify-items: stretch;
+        justify-items:center;
+        justify-items: start;
+        justify-items: end;
+        /*Alinea en el eje y*/
+        align-items: center;
+        align-items: stretch;
+        align-items: start;
+        align-items: end;
+    }
+
+    .grid-align .item:nth-child(4){
+        /*Para alinear solo un item*/
+        justify-self: start;
+        align-self: start;
+    }
